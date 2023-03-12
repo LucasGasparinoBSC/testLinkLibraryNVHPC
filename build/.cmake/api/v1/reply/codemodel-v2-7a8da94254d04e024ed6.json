@@ -1,0 +1,234 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Release-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/mpiUtils",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.mpiUtils-Release-ab5b0805d12916985aee.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "src/mpiUtils",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/gpuMathOps",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.gpuMathOps-Release-6eb668011a1b389fe77e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "src/gpuMathOps",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/gpuGeometry",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.gpuGeometry-Release-cc325fe7e5e6ae21211d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 3,
+					"source" : "src/gpuGeometry",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "tests",
+					"childIndexes" : 
+					[
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-tests-Release-b01f6abb0ab61427ef3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests"
+				},
+				{
+					"build" : "tests/unitt",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-tests.unitt-Release-762a00ad271dc5aa4c58.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 4,
+					"source" : "tests/unitt",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						5
+					],
+					"name" : "sod2d"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "mpiUtils",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "gpuMathOps",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "gpuGeometry",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "test_gpuGeometry",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "gpuGeometry::@5da3e2de52de53793375",
+					"jsonFile" : "target-gpuGeometry-Release-52fc062198d3867b83a9.json",
+					"name" : "gpuGeometry",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gpuMathOps::@3377cf9ab18db77036c9",
+					"jsonFile" : "target-gpuMathOps-Release-afc9dd5397c385f0927e.json",
+					"name" : "gpuMathOps",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "mpiUtils::@542ef6af683e47d58416",
+					"jsonFile" : "target-mpiUtils-Release-332e6f89c4759a426df3.json",
+					"name" : "mpiUtils",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "test_gpuGeometry::@c5484cb54ae3ba777b1c",
+					"jsonFile" : "target-test_gpuGeometry-Release-72dbfc9db539e334074f.json",
+					"name" : "test_gpuGeometry",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/lucas/Documents/testLinkLibraryNVHPC/build",
+		"source" : "/home/lucas/Documents/testLinkLibraryNVHPC"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

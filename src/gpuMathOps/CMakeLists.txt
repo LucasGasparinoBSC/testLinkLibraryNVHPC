@@ -1,0 +1,17 @@
+project(gpuMathOps)
+
+file(GLOB_RECURSE SRC_FILES ${CMAKE_CURRENT_LIST_DIR}/*.F90)
+set(SOURCES_DIR ${CMAKE_CURRENT_LIST_DIR})
+include_directories(${mpiUtils_INCLUDE_DIRS})
+
+add_library(${PROJECT_NAME} ${LIBRARY_TYPE} ${SRC_FILES})
+
+target_link_libraries(${PROJECT_NAME} mpiUtils)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
+set(${PROJECT_NAME}_INCLUDE_DIRS ${SOURCES_DIR} CACHE INTERNAL "${PROJECT_NAME}: Include Directories" FORCE)
+target_include_directories(${PROJECT_NAME} INTERFACE ${CMAKE_CURRENT_BINARY_DIR})
+
+install(TARGETS ${PROJECT_NAME} DESTINATION lib)
+install(FILES ${SRC_FILES} DESTINATION include)

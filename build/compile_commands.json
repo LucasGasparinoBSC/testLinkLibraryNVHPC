@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/lucas/Documents/testLinkLibraryNVHPC/build/src/mpiUtils",
+  "command": "/home/lucas/apps/compilers/nvidia/hpc_sdk/Linux_x86_64/23.1/comm_libs/hpcx/hpcx-2.13/ompi/bin/mpif90 -DmpiUtils_EXPORTS  -cpp -lstdc++ -D_USE_NVTX -lnvToolsExt -cuda -Minfo=accel -gpu=cc86,managed,lineinfo -cuda -acc -fast -fPIC -c /home/lucas/Documents/testLinkLibraryNVHPC/src/mpiUtils/mod_mpi.F90 -o CMakeFiles/mpiUtils.dir/mod_mpi.F90.o",
+  "file": "/home/lucas/Documents/testLinkLibraryNVHPC/src/mpiUtils/mod_mpi.F90"
+},
+{
+  "directory": "/home/lucas/Documents/testLinkLibraryNVHPC/build/src/gpuMathOps",
+  "command": "/home/lucas/apps/compilers/nvidia/hpc_sdk/Linux_x86_64/23.1/comm_libs/hpcx/hpcx-2.13/ompi/bin/mpif90 -DgpuMathOps_EXPORTS -I/home/lucas/Documents/testLinkLibraryNVHPC/src/mpiUtils -I/home/lucas/Documents/testLinkLibraryNVHPC/build/src/mpiUtils -cpp -lstdc++ -D_USE_NVTX -lnvToolsExt -cuda -Minfo=accel -gpu=cc86,managed,lineinfo -cuda -acc -fast -fPIC -c /home/lucas/Documents/testLinkLibraryNVHPC/src/gpuMathOps/mod_vecOps.F90 -o CMakeFiles/gpuMathOps.dir/mod_vecOps.F90.o",
+  "file": "/home/lucas/Documents/testLinkLibraryNVHPC/src/gpuMathOps/mod_vecOps.F90"
+},
+{
+  "directory": "/home/lucas/Documents/testLinkLibraryNVHPC/build/src/gpuGeometry",
+  "command": "/home/lucas/apps/compilers/nvidia/hpc_sdk/Linux_x86_64/23.1/comm_libs/hpcx/hpcx-2.13/ompi/bin/mpif90 -DgpuGeometry_EXPORTS -I/home/lucas/Documents/testLinkLibraryNVHPC/src/mpiUtils -I/home/lucas/Documents/testLinkLibraryNVHPC/src/gpuMathOps -I/home/lucas/Documents/testLinkLibraryNVHPC/build/src/mpiUtils -I/home/lucas/Documents/testLinkLibraryNVHPC/build/src/gpuMathOps -cpp -lstdc++ -D_USE_NVTX -lnvToolsExt -cuda -Minfo=accel -gpu=cc86,managed,lineinfo -cuda -acc -fast -fPIC -c /home/lucas/Documents/testLinkLibraryNVHPC/src/gpuGeometry/mod_geometry.F90 -o CMakeFiles/gpuGeometry.dir/mod_geometry.F90.o",
+  "file": "/home/lucas/Documents/testLinkLibraryNVHPC/src/gpuGeometry/mod_geometry.F90"
+},
+{
+  "directory": "/home/lucas/Documents/testLinkLibraryNVHPC/build/tests/unitt",
+  "command": "/home/lucas/apps/compilers/nvidia/hpc_sdk/Linux_x86_64/23.1/comm_libs/hpcx/hpcx-2.13/ompi/bin/mpif90  -I/home/lucas/Documents/testLinkLibraryNVHPC/src/gpuGeometry -I/home/lucas/Documents/testLinkLibraryNVHPC/build/src/gpuGeometry -I/home/lucas/Documents/testLinkLibraryNVHPC/build/src/mpiUtils -I/home/lucas/Documents/testLinkLibraryNVHPC/build/src/gpuMathOps -cpp -lstdc++ -D_USE_NVTX -lnvToolsExt -cuda -Minfo=accel -gpu=cc86,managed,lineinfo -cuda -acc -fast -c /home/lucas/Documents/testLinkLibraryNVHPC/tests/unitt/test_gpuGeometry.F90 -o CMakeFiles/test_gpuGeometry.dir/test_gpuGeometry.F90.o",
+  "file": "/home/lucas/Documents/testLinkLibraryNVHPC/tests/unitt/test_gpuGeometry.F90"
+}
+]
