@@ -101,8 +101,6 @@ end module mod_nvtx
 
 #else
 
-
-
 module mod_nvtx
    use iso_c_binding
    implicit none

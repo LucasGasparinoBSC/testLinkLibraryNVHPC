@@ -1,12 +1,11 @@
-project(gpuMathOps)
+project(Utils)
 
 file(GLOB_RECURSE SRC_FILES ${CMAKE_CURRENT_LIST_DIR}/*.F90)
 set(SOURCES_DIR ${CMAKE_CURRENT_LIST_DIR})
-include_directories(${mpiUtils_INCLUDE_DIRS} ${Utils_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} ${LIBRARY_TYPE} ${SRC_FILES})
 
-target_link_libraries(${PROJECT_NAME} mpiUtils Utils)
+target_link_libraries(${PROJECT_NAME})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 

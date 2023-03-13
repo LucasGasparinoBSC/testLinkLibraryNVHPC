@@ -1,4 +1,5 @@
 module mod_vecOps
+    use mod_nvtx
     use mod_mpi
 #ifndef NOACC
 	use cudafor
@@ -27,15 +28,19 @@ module mod_vecOps
             real(4)                 :: sPart
             s = 0.0
             sPart = 0.0
+            call nvtxStartRange("Partial dot product")
             !$acc parallel loop reduction(+:sPart)
             do i=1,n
                 sPart = sPart + a(i)*b(i)
             end do
             !$acc end parallel loop
+            call nvtxEndRange()
 
             ! If more than 1 rank, use allreduce to sum up the partial sums
             if (mpi_nprocs > 1) then
+                call nvtxStartRange("Reduce partial dot product")
                 call mpi_allreduce(sPart,s,1,mpi_real,mpi_sum,mpi_comm_world,mpi_err)
+                call nvtxEndRange()
             else
                 s = sPart
             end if
