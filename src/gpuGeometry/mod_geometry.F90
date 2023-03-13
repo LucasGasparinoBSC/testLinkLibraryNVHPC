@@ -12,7 +12,10 @@ module mod_geometry
             real(4),    intent(in)  :: x(n)
             real(4),    intent(out) :: norm
             norm = 0.0
+            call nvtxStartRange("Calling dotProduct")
             call dotProduct(n, x, x, norm)
+            call nvtxEndRange()
+            
             norm = sqrt(norm)
         end subroutine vecNorm
 end module mod_geometry

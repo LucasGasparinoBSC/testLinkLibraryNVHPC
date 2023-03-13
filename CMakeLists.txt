@@ -6,6 +6,7 @@ option(UNIT_TESTING "Enable unit tests" ON)
 option(USE_MPI "Compile using MPI" ON)
 
 option(USE_GPU "Compile using GPU" ON)
+option(USE_NVTX "Compile using NVTX" ON)
 
 # Folder with files configuring extra CMake options
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
