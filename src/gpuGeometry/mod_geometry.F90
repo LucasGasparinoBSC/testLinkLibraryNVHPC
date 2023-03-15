@@ -23,5 +23,7 @@ module mod_geometry
         subroutine callRoutinesFromDummyArrays()
             implicit none
             call modifyDummy2()
+            dummy2(1) = 10
+            print*, dummy2(:)
         end subroutine callRoutinesFromDummyArrays
 end module mod_geometry
