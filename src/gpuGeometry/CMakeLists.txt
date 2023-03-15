@@ -2,11 +2,11 @@ project(gpuGeometry)
 
 file(GLOB_RECURSE SRC_FILES ${CMAKE_CURRENT_LIST_DIR}/*.F90)
 set(SOURCES_DIR ${CMAKE_CURRENT_LIST_DIR})
-include_directories(${mpiUtils_INCLUDE_DIRS} ${gpuMathOps_INCLUDE_DIRS})
+include_directories(${mpiUtils_INCLUDE_DIRS} ${gpuMathOps_INCLUDE_DIRS} ${dummyArrays_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} ${LIBRARY_TYPE} ${SRC_FILES})
 
-target_link_libraries(${PROJECT_NAME} mpiUtils gpuMathOps)
+target_link_libraries(${PROJECT_NAME} mpiUtils gpuMathOps dummyArrays)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
