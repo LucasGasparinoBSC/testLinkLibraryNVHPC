@@ -1,9 +1,15 @@
+module arrays
+    contains
+    implicit none
+    real(4), ALLOCATABLE :: arr1(:)
+end module arrays
+
 module mod_allocArrays
+    use arrays
     implicit none
     integer(4), parameter :: nArr = 100
-    real(4), private, allocatable :: arr1(:)
     contains
-#if 0
+#if 1
         subroutine allocArrays()
             implicit none
             integer(4) :: i
