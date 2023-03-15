@@ -20,4 +20,8 @@ module mod_geometry
             
             norm = sqrt(norm)
         end subroutine vecNorm
+        subroutine callRoutinesFromDummyArrays()
+            implicit none
+            call modifyDummy2()
+        end subroutine callRoutinesFromDummyArrays
 end module mod_geometry
