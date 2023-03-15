@@ -30,5 +30,6 @@ module mod_geometry
             print*, dummy3(:)
             call modifyDummy4()
             !print*, dummy4(:) ! ! As dummy4 is PRIVATE, this will not work
+            call modifyArr1()
         end subroutine callRoutinesFromDummyArrays
 end module mod_geometry
