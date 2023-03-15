@@ -25,5 +25,8 @@ module mod_geometry
             call modifyDummy2()
             dummy2(1) = 10
             print*, dummy2(:)
+            call modifyDummy3()
+            !dummy3(1) = 20 ! ! As dummy3 is PROTECTED, this will not work
+            print*, dummy3(:)
         end subroutine callRoutinesFromDummyArrays
 end module mod_geometry
