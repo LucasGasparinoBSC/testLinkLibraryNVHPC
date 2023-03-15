@@ -1,7 +1,7 @@
 module arrays
     contains
     implicit none
-    real(4), ALLOCATABLE :: arr1(:)
+    real(4), ALLOCATABLE, private :: arr1(:)
 end module arrays
 
 module mod_allocArrays
@@ -19,7 +19,7 @@ module mod_allocArrays
                 arr1(i) = real(i,4)
             end do
             !$acc end parallel loop
-            print*, arr1(:)
+            print*, arr1(nArr)
         end subroutine modifyArr1
 #endif
 end module mod_allocArrays
