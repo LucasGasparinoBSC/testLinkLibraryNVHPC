@@ -1,3 +1,4 @@
+add_subdirectory(dummyArrays)
 add_subdirectory(Utils)
 add_subdirectory(mpiUtils)
 add_subdirectory(gpuMathOps)
