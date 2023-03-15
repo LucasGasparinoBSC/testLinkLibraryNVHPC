@@ -1,7 +1,7 @@
 module mod_geometry
     use mod_mpi
     use mod_paramArrays
-    !use mod_allocArrays
+    use mod_allocArrays
     use mod_vecOps
 #ifndef NOACC
     use openacc
