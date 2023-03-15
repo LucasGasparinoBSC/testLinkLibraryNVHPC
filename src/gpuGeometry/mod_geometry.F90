@@ -28,5 +28,7 @@ module mod_geometry
             call modifyDummy3()
             !dummy3(1) = 20 ! ! As dummy3 is PROTECTED, this will not work
             print*, dummy3(:)
+            call modifyDummy4()
+            !print*, dummy4(:) ! ! As dummy4 is PRIVATE, this will not work
         end subroutine callRoutinesFromDummyArrays
 end module mod_geometry
