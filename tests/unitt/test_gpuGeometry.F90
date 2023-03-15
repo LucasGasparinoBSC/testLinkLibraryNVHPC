@@ -47,6 +47,9 @@ program test_gpuGeometry
         if (mpi_rank .eq. 0) write(*,*) "Norm is correct"
     end if
 
+    ! Test that duummy arrays can be accessed
+    call callRoutinesFromDummyArrays()
+
     ! Finalize the MPI env
     call mpiEnd()
 end program test_gpuGeometry

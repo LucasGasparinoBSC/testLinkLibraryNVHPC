@@ -1,5 +1,7 @@
 module mod_geometry
     use mod_mpi
+    use mod_paramArrays
+    use mod_allocArrays
     use mod_vecOps
 #ifndef NOACC
     use openacc
@@ -18,4 +20,16 @@ module mod_geometry
             
             norm = sqrt(norm)
         end subroutine vecNorm
+        subroutine callRoutinesFromDummyArrays()
+            implicit none
+            call modifyDummy2()
+            dummy2(1) = 10
+            print*, dummy2(:)
+            call modifyDummy3()
+            !dummy3(1) = 20 ! ! As dummy3 is PROTECTED, this will not work
+            print*, dummy3(:)
+            call modifyDummy4()
+            !print*, dummy4(:) ! ! As dummy4 is PRIVATE, this will not work
+            call modifyArr1()
+        end subroutine callRoutinesFromDummyArrays
 end module mod_geometry
